@@ -1601,6 +1601,9 @@ input, select, textarea {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		background-image: url("/assets/css/images/background1.png");
+		background-repeat: repeat;
+		background-color: rgb(255, 230, 234);
 	}
 
 		#main .thumb {
@@ -1613,15 +1616,18 @@ input, select, textarea {
 			opacity: 1;
 			overflow: hidden;
 			position: relative;
+			height: 100%;
+			width: 100%;
+			border: 25px solid;
+			border-image: url(/assets/css/images/cloudborder.png) 15 round;
+			border-image-slice: 20;
+			background-image: url("/assets/css/images/background1.png");
 		}
 
 			#main .thumb:after {
 				background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
-				background-image: -webkit-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
-				background-image: -ms-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
-				background-image: linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				pointer-events: none;
-				background-size: cover;
+				background-size: contain;
 				content: '';
 				display: block;
 				height: 100%;
@@ -1629,6 +1635,9 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+				border-image: url(/assets/css/images/cloudborder.png);
+				border: 10px solid transparent;
+				border-image-slice: 20;
 			}
 
 			#main .thumb > .image {
@@ -1636,12 +1645,13 @@ input, select, textarea {
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
-				border: 0;
+				border: 10px solid transparent;
 				height: 100%;
 				left: 0;
 				position: absolute;
 				top: 0;
 				width: 100%;
+				
 			}
 
 			#main .thumb > h2 {
