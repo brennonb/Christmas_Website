@@ -1066,6 +1066,7 @@ input, select, textarea {
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
 		background: rgba(36, 38, 41, 0.975);
+		background-image: url(/assets/css/images/background1.png);
 		bottom: 4em;
 		left: 0;
 		max-height: calc(80vh - 4em);
@@ -1479,9 +1480,9 @@ input, select, textarea {
 		user-select: none;
 		width: 100%;
 		z-index: 10002;
-		background-image: url(/assets/css/images/tongy.gif), url(/assets/css/images/yaaaaaay.gif), url(/assets/css/images/starry.gif),url(/assets/css/images/sparkles.gif);
-		background-repeat: no-repeat, no-repeat, no-repeat, repeat;
-		background-position: left, right, center
+		background-image: url(/assets/css/images/tongy.gif), url(/assets/css/images/yaaaaaay.gif), url(/assets/css/images/sparkles.gif);
+		background-repeat: no-repeat, no-repeat, repeat;
+		background-position: left, center
 		
 	}
 
@@ -1499,6 +1500,7 @@ input, select, textarea {
 			line-height: 1;
 			margin: 0;
 			vertical-align: middle;
+			position: center;
 		}
 
 			#header h1 a {
@@ -1533,21 +1535,30 @@ input, select, textarea {
 						-ms-transition: background-color 0.5s ease;
 						transition: background-color 0.5s ease;
 						border: 0;
-						color: #ffffff;
+						color: #000000;
 						display: inline-block;
 						letter-spacing: 0.1em;
 						padding: 0 1.65em;
 						text-transform: uppercase;
+						font-weight: bold;
+						background-color: transparent;
+						border-radius: 100px;
+						background-image: url(/assets/css/images/hearts2.gif), url(/assets/css/images/background1.png);
+						background-repeat: repeat;
+						background-size: cover;
+						background-position: right;
+						border: 1px solid black;
+						
 					}
 
 						#header nav > ul > li a.icon:before {
-							color: #f2def5;
+							color: #000000;
 							float: right;
 							margin-left: 0.75em;
 						}
 
 						#header nav > ul > li a:hover {
-							color: #ffffff !important;
+							color: #000000 !important;
 						}
 
 						#header nav > ul > li a.active {
@@ -1589,13 +1600,13 @@ input, select, textarea {
 
 	}
 audio {
-	display: inline-block;
+	display: inline-flex;
+	justify-content: center;
 	padding-top: 20px;
 	padding-left: 20px;
 	vertical-align: auto;
 	align-items: center;
 	gap: 10px;
-
 }
 /* Main */
 
@@ -1618,7 +1629,7 @@ audio {
 		background-color: rgb(255, 230, 234);
 	}
 		#main > article > .bg-image {
-			background-image: url(/assets/css/images/sparkles.gif);
+			background-image: url(/assets/css/images/textbordertest.jpg);
 			background-position: center;
 			position: absolute;
 			background-repeat: no-repeat;
@@ -1638,6 +1649,7 @@ audio {
 			width: 100%;
 			border: 10px solid transparent;
 			background-image: url("/assets/css/images/background1.png");
+			background-color: transparent;
 			
 		}
 			
@@ -1678,7 +1690,9 @@ audio {
 				left: 2.1875em;
 				margin: 0;
 				position: absolute;
-				z-index: 1;
+				z-index: 1;	
+				color: black;	
+				text-align: justify;
 			}
 
 			#main .thumb > p {
