@@ -192,7 +192,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #a0a0a1;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "MS UI Gothic", Helvetica, sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
 		letter-spacing: 0.025em;
@@ -1469,7 +1469,7 @@ input, select, textarea {
 		-moz-user-select: none;
 		-ms-user-select: none;
 		-webkit-user-select: none;
-		background: #1f2224;
+		background: #fffffffd;
 		bottom: -1em;
 		height: 5em;
 		left: 0;
@@ -1479,6 +1479,10 @@ input, select, textarea {
 		user-select: none;
 		width: 100%;
 		z-index: 10002;
+		background-image: url(/assets/css/images/tongy.gif), url(/assets/css/images/yaaaaaay.gif), url(/assets/css/images/starry.gif),url(/assets/css/images/sparkles.gif);
+		background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+		background-position: left, right, center
+		
 	}
 
 		body.is-preload #header {
@@ -1537,7 +1541,7 @@ input, select, textarea {
 					}
 
 						#header nav > ul > li a.icon:before {
-							color: #505051;
+							color: #f2def5;
 							float: right;
 							margin-left: 0.75em;
 						}
@@ -1547,7 +1551,7 @@ input, select, textarea {
 						}
 
 						#header nav > ul > li a.active {
-							background-color: #242629;
+							background-color: #fbd0ff;
 						}
 
 	@media screen and (max-width: 736px) {
@@ -1584,7 +1588,15 @@ input, select, textarea {
 			}
 
 	}
+audio {
+	display: inline-block;
+	padding-top: 20px;
+	padding-left: 20px;
+	vertical-align: auto;
+	align-items: center;
+	gap: 10px;
 
+}
 /* Main */
 
 	#main {
@@ -1605,7 +1617,13 @@ input, select, textarea {
 		background-repeat: repeat;
 		background-color: rgb(255, 230, 234);
 	}
-
+		#main > article > .bg-image {
+			background-image: url(/assets/css/images/sparkles.gif);
+			background-position: center;
+			position: absolute;
+			background-repeat: no-repeat;
+			border-width: 0;
+		}
 		#main .thumb {
 			-moz-transition: opacity 1.25s ease-in-out;
 			-webkit-transition: opacity 1.25s ease-in-out;
@@ -1618,12 +1636,11 @@ input, select, textarea {
 			position: relative;
 			height: 100%;
 			width: 100%;
-			border: 25px solid;
-			border-image: url(/assets/css/images/cloudborder.png) 15 round;
-			border-image-slice: 20;
+			border: 10px solid transparent;
 			background-image: url("/assets/css/images/background1.png");
+			
 		}
-
+			
 			#main .thumb:after {
 				background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				pointer-events: none;
@@ -1635,9 +1652,8 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
-				border-image: url(/assets/css/images/cloudborder.png);
-				border: 10px solid transparent;
-				border-image-slice: 20;
+
+
 			}
 
 			#main .thumb > .image {
@@ -1645,13 +1661,14 @@ input, select, textarea {
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
-				border: 10px solid transparent;
+				border-width: 0;
 				height: 100%;
 				left: 0;
 				position: absolute;
 				top: 0;
 				width: 100%;
-				
+
+
 			}
 
 			#main .thumb > h2 {
@@ -1666,6 +1683,7 @@ input, select, textarea {
 
 			#main .thumb > p {
 				display: none;
+				
 			}
 
 		#main:after {
