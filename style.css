@@ -12,7 +12,7 @@ the images as variables */
         --body-bg-image: url(assets/images/heartsfall.gif);
 
         /* colors */
-        --content: #f2b1f8;
+        --content: #4D2B34;
     }
 
     /* if you have the URL of a font, you can set it below */
@@ -37,11 +37,12 @@ and then link it! Many fonts have separate files for each style
         background-color: #eac7ff;
         /* you can delete the line below if you'd prefer to not use an image */
         background-size: 65px;
-        color: #fceaff;
+        color: #4D2B34;
         background-image: var(--body-bg-image);
         background-repeat: repeat;
         background-size: contain;
         cursor: url('assets/images/cursorscat.ico'), default;
+        
     }
 
     * {
@@ -78,7 +79,7 @@ and change the media query according to the comment! */
     /* the area below is for all links on your page
 EXCEPT for the navigation */
     #container a {
-        color: #efc5f1;
+        color: #4D2B34;
         font-weight: bold;
         /* if you want to remove the underline
 you can add a line below here that says:
@@ -87,23 +88,27 @@ text-decoration:none; */
 
     #header {
         width: 100%;
-        background-color: #fa9dfa;
+        background-color: #ffffff;
         /* header color here! */
         height: 150px;
         /* this is only for a background image! */
         /* if you want to put images IN the header, 
 you can add them directly to the <div id="header"></div> element! */
-        background-image: var(--header-image);
+        background-image: url(assets/images/chi.gif);
         background-size: contain;
-        background-repeat: repeat;
+        background-repeat: no-repeat;
+        background-position: right;
     }
 
     /* navigation section!! */
     #navbar {
         height: 40px;
-        background-color: #fac2fa;
+        background-color: #ffffff;
         /* navbar color */
         width: 100%;
+        background-image: url(assets/images/background1.png);
+        background-size: contain;
+        background-repeat: repeat;
     }
 
     #navbar ul {
@@ -186,6 +191,8 @@ between the sidebars! */
         border-radius: 10px;
         border-image: url(assets/images/biscuitcreme.png) 5 fill round;
         font-family: ms pgothic;
+
+        
     }
 
     .main-title {
