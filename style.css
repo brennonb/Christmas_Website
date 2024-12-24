@@ -9,10 +9,10 @@ the images as variables */
 
     :root {
         --header-image: url(assets/images/bunhop.gif);
-        --body-bg-image: url(assets/images/heartsfall.gif);
+        --body-bg-image: url(assets/images/bowdotbg.jpg);
 
         /* colors */
-        --content: #4D2B34;
+        --content: #271419d8;
     }
 
     /* if you have the URL of a font, you can set it below */
@@ -40,7 +40,6 @@ and then link it! Many fonts have separate files for each style
         color: #4D2B34;
         background-image: var(--body-bg-image);
         background-repeat: repeat;
-        background-size: contain;
         cursor: url('assets/images/cursorscat.ico'), default;
         
     }
@@ -72,7 +71,7 @@ and change the media query according to the comment! */
 
     .container {
         border: 5px solid transparent;
-        background-image: url(assets/images/bowsandrose.jpg);
+        background-image: url(assets/images/cookiebg.jpg);
         border-radius: 1%;
     }   
     
@@ -95,18 +94,22 @@ text-decoration:none; */
         /* if you want to put images IN the header, 
 you can add them directly to the <div id="header"></div> element! */
         background-image: url(assets/images/chi.gif);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
+        background-size: contain, 30%;
+        background-repeat: no-repeat; 
+        background-position: center;
+        border-right: 1px solid rgb(255, 212, 212);
+        border-left: 1px solid rgb(255, 212, 212);
+        border-bottom: 1px solid transparent;
+        border-radius: 25px;
     }
+    
 
     /* navigation section!! */
     #navbar {
         height: 40px;
-        background-color: #ffffff;
+        background-color: transparent;
         /* navbar color */
         width: 100%;
-        background-image: url(assets/images/background1.png);
         background-size: contain;
         background-repeat: repeat;
     }
@@ -148,7 +151,7 @@ you can add them directly to the <div id="header"></div> element! */
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
     aside {
-        background-color: #000000;
+        background-color: transparent;
         width: 200px;
         padding: 20px;
         font-size: smaller;
@@ -161,6 +164,26 @@ create styles for #leftSidebar and #rightSidebar */
  
     }
 
+    #leftSidebar h2 {
+        background-size: cover;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    #rightSidebar h2 {
+        background-size: cover;
+        text-align: center;
+        background-color: transparent;
+    }
+
+     .bunbg    {
+        background-image: url(assets/images/bunborder.png);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 10px solid black;
+        border-image: url(assets/images/angelsweet.png) 10 round;
+    }
 
     /* this is the color of the main content area,
 between the sidebars! */
@@ -169,11 +192,20 @@ between the sidebars! */
         color: rgb(219, 142, 215);
         flex: 1;
         order: 2;
-        border: 1px solid black;
+        border-left: 1px solid rgb(248, 219, 219);
+        border-right: 1px solid rgb(248, 219, 219);
         background-image: url(assets/images/bowsandrose.jpg);
         background-size: 100px;
         padding: 20px;
         background-repeat: repeat;
+        border-radius: 10px;
+    }
+
+    .melonpan {
+        max-height: 100%;
+        max-width: 100%;
+        display: inline-block;
+        margin-right: auto;
     }
 
     main h1 p {
@@ -199,7 +231,7 @@ between the sidebars! */
         border: 10px solid transparent;
         border-radius: 25px;
         text-align: center;
-        background-image: url(assets/images/vanillanote.jpg);
+        background-image: url(assets/images/neopatt.jpg);
         box-shadow: 2px 5px 0 0 rgba(189, 119, 131, 0.596);
         background-size: contain;
     }
@@ -219,7 +251,7 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
     }
 
     footer {
-        background-color: #000000;
+        background-color: transparent;
         /* background color for footer */
         width: 100%;
         height: 40px;
@@ -227,12 +259,14 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
         text-align: center;
         /* this centers the footer text */
         cursor: url('assets/images/cursorscat.ico'), default;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     h1,
     h2,
     h3 {
-        color: #ED64F5;
+        color: #000000;
     }
 
     h1 {
@@ -301,4 +335,72 @@ feel free to play around with the order!
             cursor: url('assets/images/cursorscat.ico'), default;
 
         }
+    }
+
+    .divider {
+        width: 100%;
+    }
+    
+    .bottom-right {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50% ;
+        max-width: 10%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+
+    }
+    .bottom-left {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 10%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+    }
+
+    .bottom-center {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 10%;
+        position: fixed;
+        bottom: 0;
+        right: 50%;
+        left: 50%;
+    }
+
+    .fit-image {
+        max-width: 100%;
+    }
+
+    .inline-fit {
+        display: inline-block;
+        max-width: 100%;
+        max-height: 100%;;
+    }
+
+    .align-right {
+        display: block;
+        margin-left: auto;
+
+    }
+
+    .top-right {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 10%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 93%;
     }
