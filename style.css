@@ -156,15 +156,18 @@ create styles for #leftSidebar and #rightSidebar */
         padding: 20px;
         font-size: smaller;
         /* this makes the sidebar text slightly smaller */
+
     }
 
     aside .box {
         background-color: #fff7fe;
         color: black;
- 
+        border: 1px solid rgb(255, 212, 212);
+        border-radius: 10px;
+
     }
 
-    #leftSidebar h2 {
+    #lefSidebart h2 {
         background-size: cover;
         text-align: center;
         background-color: transparent;
@@ -194,10 +197,9 @@ between the sidebars! */
         order: 2;
         border-left: 1px solid rgb(248, 219, 219);
         border-right: 1px solid rgb(248, 219, 219);
-        background-image: url(assets/images/bowsandrose.jpg);
-        background-size: 100px;
-        padding: 20px;
+        background-image: url(assets/images/feathers.gif);
         background-repeat: repeat;
+        padding: 20px;
         border-radius: 10px;
     }
 
@@ -404,3 +406,4 @@ feel free to play around with the order!
         right: 0;
         left: 93%;
     }
+
