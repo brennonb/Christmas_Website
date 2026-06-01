@@ -1,0 +1,377 @@
+
+
+    :root {
+        --header-image: url(../assets/images/bunhop.gif);
+        --body-bg-image: url(../assets/images/bowdotbg.jpg);
+
+        /* colors */
+        --content: #271419d8;
+    }
+
+
+    a {
+        cursor: url('../assets/images/cursorscat.ico'), default;
+
+    }
+
+
+    body {
+        font-family: ms pgothic, sans-serif;
+        margin-top: 2%;
+        background-color: #eac7ff;
+        background-size: 65px;
+        color: #4D2B34;
+        background-image: var(--body-bg-image);
+        background-repeat: repeat;
+        cursor: url('../assets/images/cursorscat.ico'), default;
+        
+    }
+
+    * {
+        box-sizing: border-box;
+        cursor: url('../assets/images/cursorscat.ico'), default;
+    }
+
+    #container {
+        max-width: 900px;
+        margin: 0 auto;
+
+    }
+
+    .container {
+        border: 5px solid transparent;
+        background-image: url(../assets/images/cookiebg.jpg);
+        border-radius: 1%;
+    }   
+    
+
+    #container a {
+        color: #4D2B34;
+        font-weight: bold;
+
+    }
+
+    #header {
+        width: 100%;
+        background-color: #ffffff;
+        height: 150px;
+        background-image: url(../assets/images/chi.gif);
+        background-size: contain, 30%;
+        background-repeat: no-repeat; 
+        background-position: center;
+        border-right: 1px solid rgb(255, 212, 212);
+        border-left: 1px solid rgb(255, 212, 212);
+        border-bottom: 1px solid transparent;
+        border-radius: 25px;
+    }
+    
+
+    /* navigation section */
+        #navbar {
+        height: 40px;
+        background-color: transparent;
+        /* navbar color */
+        width: 100%;
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+    #navbar ul li a {
+        position:relative;
+        z-index: 1;
+        opacity: 1;
+        padding: 10px 20px;
+    }
+
+    #navbar ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        background-image: url(../assets/images/lacebow.png);
+        background-size: cover;
+        z-index: 0;               /* behind the link text */
+    }
+
+    /* this is the image layer */
+    .navFirstButton::before {
+        content: '';
+        position: absolute;
+        inset: -10px;
+        background-image: var(--hover-img);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .navFirstButton:hover::before {
+        opacity: 1;
+    }
+
+    .navFirstButton {
+        padding-top: 10px;
+        position: relative; /* needed to anchor ::before */
+    }
+
+    /* navigation link when a link is hovered over */
+    #navbar li a:hover {
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    .navFirstButton:hover {
+        opacity: 1;
+    }
+
+    #flex {
+        display: flex;
+    }
+
+    .navFirstButton a {
+    position: relative;
+    z-index: 1;
+    }
+
+    aside {
+        background-color: transparent;
+        width: 200px;
+        padding: 20px;
+        font-size: smaller;
+        /* this makes the sidebar text slightly smaller */
+
+    }
+
+    aside .box {
+        background-color: #fff7fe;
+        color: black;
+        border: 1px solid rgb(255, 212, 212);
+        border-radius: 10px;
+
+    }
+
+    #lefSidebart h2 {
+        background-size: cover;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    #rightSidebar h2 {
+        background-size: cover;
+        text-align: center;
+        background-color: transparent;
+    }
+
+     .bunbg    {
+        background-image: url(../assets/images/bunborder.png);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 10px solid black;
+        border-image: url(../assets/images/angelsweet.png) 10 round;
+    }
+
+    /* this is the color of the main content area,
+between the sidebars */
+    main {
+        background-color: #ffffff;
+        color: rgb(219, 142, 215);
+        flex: 1;
+        order: 2;
+        border-left: 1px solid rgb(248, 219, 219);
+        border-right: 1px solid rgb(248, 219, 219);
+        background-image: url(../assets/images/feathers.gif);
+        background-repeat: repeat;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .melonpan {
+        max-height: 100%;
+        max-width: 100%;
+        display: inline-block;
+        margin-right: auto;
+    }
+
+    main h1 p {
+        color: black;
+    }
+
+    .main-style {
+        border: 3px solid rgb(230, 146, 238);
+        padding: 10px;
+        color: black;
+        background-color: #fff7fe;
+        background-repeat: repeat;
+        background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(247, 234, 234) 100%);
+        border-style: dotted;
+        border-radius: 10px;
+        border-image: url(../assets/images/biscuitcreme.png) 5 fill round;
+        font-family: ms pgothic;
+
+        
+    }
+
+    .main-title {
+        border: 10px solid transparent;
+        border-radius: 25px;
+        text-align: center;
+        background-image: url(../assets/images/neopatt.jpg);
+        box-shadow: 2px 5px 0 0 rgba(189, 119, 131, 0.596);
+        background-size: contain;
+    }
+
+     #leftSidebar {
+        order: 1;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    footer {
+        background-color: transparent;
+        /* background color for footer */
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        text-align: center;
+        /* this centers the footer text */
+        cursor: url('../assets/images/cursorscat.ico'), default;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #000000;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    strong {
+        /* this styles bold text */
+        color: #ED64F5;
+    }
+
+    .box {
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        padding: 10px;
+    }
+
+    /* CSS for extras */
+
+    #topBar {
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+        font-size: smaller;
+        background-color: #ffffff;
+    }
+
+
+    /* BELOW THIS POINT IS MEDIA QUERY */
+
+    @media only screen and (max-width: 800px) {
+        #flex {
+            flex-wrap: wrap;
+        }
+
+        aside {
+            width: 100%;
+        }
+
+        main {
+            order: 1;
+        }
+
+        #leftSidebar {
+            order: 2;
+        }
+
+        #rightSidebar {
+            order: 3;
+        }
+
+        #navbar ul {
+            flex-wrap: wrap;
+            cursor: url('../assets/images/cursorscat.ico'), default;
+
+        }
+    }
+
+    .divider {
+        width: 100%;
+    }
+    
+    .bottom-right {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50% ;
+        max-width: 10%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+
+    }
+    .bottom-left {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 10%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+    }
+
+    .bottom-center {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 10%;
+        position: fixed;
+        bottom: 0;
+        right: 50%;
+        left: 50%;
+    }
+
+    .fit-image {
+        max-width: 100%;
+    }
+
+    .inline-fit {
+        display: inline-block;
+        max-width: 100%;
+        max-height: 100%;;
+    }
+
+    .align-right {
+        display: block;
+        margin-left: auto;
+
+    }
+
+    .top-right {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 10%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 93%;
+    }
+

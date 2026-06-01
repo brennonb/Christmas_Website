@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="blogStyle.css">
 </head>
 <body>
     <h1>Blog</h1>
-    
+        <div id="container" class="container">
+        <div id="headerArea">
+            <img src="assets/images/strawbhanger.gif" class="top-right">
+            <div id="header" style="height: 145px;"></div>
+            <nav id="navbar" style="margin-bottom: 10px;"> 
+                    <ul id="navbar" class="navLeftButtons">
+                        <li class="navFirstButton" data-hover-img="../assets/images/angel.jpg" data-hover-text="Home">
+                            <a href="../index.html">Home</a></li>
+                        <li class="navFirstButton " data-hover-img="../assets/images/fan.jpg" data-hover-text="Blog">
+                            <a href="../blog/blog.html">Blog</a></li>
+                        <li class="navFirstButton " data-hover-img="../assets/images/clover.jpg" data-hover-text="Garden">
+                            <a href="../Garden/Garden.html">Garden</a></li>
+                        <li class="navFirstButton " data-hover-img="../assets/images/kittypaw.png" data-hover-text="Fashion">
+                            <a href="../Fashion/Fashion.html">Fashion</a></li>
+                     </ul>   
+
+    <script>
+
+        document.querySelectorAll('.navFirstButton').forEach(btn => {
+        const img = btn.dataset.hoverImg;
+        if (img) btn.style.setProperty('--hover-img', `url('${img}')`);
+        });
+
+    </script>
+                    
+            </nav>
+        </div>
 </body>
 </html>
