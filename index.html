@@ -13,8 +13,6 @@
 <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a 
 href="https://webneko.net">Neko</a></h1>
 
-
-
     <style>
         /* customizable snowflake styling */
          
@@ -70,8 +68,19 @@ href="https://webneko.net">Neko</a></h1>
         <div id="headerArea">
             <img src="assets/images/strawbhanger.gif" class="top-right">
             <div id="header" style="height: 145px;"></div>
-            <nav id="navbar" style="margin-bottom: 10px;">   
-                    <img src="assets/images/lacebow.png" class="divider">  
+            <nav id="navbar" style="margin-bottom: 10px;"> 
+                    <ul id="navbar" class="navLeftButtons">
+                        <li class="navFirstButton" data-hover-img="assets/images/angel.jpg" data-hover-text="Home">
+                            <a href="index.html">Home</a></li>
+                        <li class="navFirstButton " data-hover-img="assets/images/fan.jpg" data-hover-text="Blog">
+                            <a href="/blog/blog.html">Blog</a></li>
+                        <li class="navFirstButton " data-hover-img="assets/images/clover.jpg" data-hover-text="Garden">
+                            <a href="/Garden/Garden.html">Garden</a></li>
+                        <li class="navFirstButton " data-hover-img="assets/images/kittypaw.png" data-hover-text="Fashion">
+                            <a href="/Fashion/Fashion.html">Fashion</a></li>
+                     </ul>   
+
+                    
             </nav>
         </div>
 
@@ -123,6 +132,12 @@ href="https://webneko.net">Neko</a></h1>
     <img src="assets/images/angelfly.gif" class="bottom-left">
     <img src="assets/images/angelfly.gif" class="bottom-right">
     <img src="assets/images/bunhop.gif" class="bottom-center">
+    <script>
+        document.querySelectorAll('.navFirstButton').forEach(btn => {
+        const img = btn.dataset.hoverImg;
+        if (img) btn.style.setProperty('--hover-img', `url('${img}')`);
+        });
+    </script>
   </body>
   
 </html>

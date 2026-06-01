@@ -1,11 +1,4 @@
 
-    /* user styles */
-
-    /* styles are what change the color and sizes of stuff on your site. */
-
-    /* these are variables that are being used in the code
-these tended to confuse some people, so I only kept 
-the images as variables */
 
     :root {
         --header-image: url(assets/images/bunhop.gif);
@@ -15,16 +8,7 @@ the images as variables */
         --content: #271419d8;
     }
 
-    /* if you have the URL of a font, you can set it below */
-    /* feel free to delete this if it's not your vibe */
 
-    /* this seems like a lot for just one font and I would have to agree 
-but I wanted to include an example of how to include a custom font.
-If you download a font file you can upload it onto your Neocities
-and then link it! Many fonts have separate files for each style
-(bold, italic, etc. T_T) which is why there are so many!
-
-*/
     a {
         cursor: url('assets/images/cursorscat.ico'), default;
 
@@ -35,7 +19,6 @@ and then link it! Many fonts have separate files for each style
         font-family: ms pgothic, sans-serif;
         margin-top: 2%;
         background-color: #eac7ff;
-        /* you can delete the line below if you'd prefer to not use an image */
         background-size: 65px;
         color: #4D2B34;
         background-image: var(--body-bg-image);
@@ -49,24 +32,10 @@ and then link it! Many fonts have separate files for each style
         cursor: url('assets/images/cursorscat.ico'), default;
     }
 
-    /* below this line is CSS for the layout */
-
-    /* this is a CSS comment
-to uncomment a line of CSS, remove the * and the /
-before and after the text */
-
-
-    /* the "container" is what wraps your entire website */
-    /* if you want something (like the header) to be Wider than
-the other elements, you will need to move that div outside
-of the container */
     #container {
         max-width: 900px;
-        /* this is the width of your layout! */
-        /* if you change the above value, scroll to the bottom
-and change the media query according to the comment! */
         margin: 0 auto;
-        /* this centers the entire page */
+
     }
 
     .container {
@@ -75,24 +44,17 @@ and change the media query according to the comment! */
         border-radius: 1%;
     }   
     
-    /* the area below is for all links on your page
-EXCEPT for the navigation */
+
     #container a {
         color: #4D2B34;
         font-weight: bold;
-        /* if you want to remove the underline
-you can add a line below here that says:
-text-decoration:none; */
+
     }
 
     #header {
         width: 100%;
         background-color: #ffffff;
-        /* header color here! */
         height: 150px;
-        /* this is only for a background image! */
-        /* if you want to put images IN the header, 
-you can add them directly to the <div id="header"></div> element! */
         background-image: url(assets/images/chi.gif);
         background-size: contain, 30%;
         background-repeat: no-repeat; 
@@ -104,8 +66,8 @@ you can add them directly to the <div id="header"></div> element! */
     }
     
 
-    /* navigation section!! */
-    #navbar {
+    /* navigation section */
+        #navbar {
         height: 40px;
         background-color: transparent;
         /* navbar color */
@@ -114,42 +76,66 @@ you can add them directly to the <div id="header"></div> element! */
         background-repeat: repeat;
     }
 
+    #navbar ul li a {
+        position:relative;
+        z-index: 1;
+        opacity: 1;
+        padding: 10px 20px;
+    }
+
     #navbar ul {
         display: flex;
         padding: 0;
         margin: 0;
         list-style-type: none;
-        justify-content: space-evenly;
+        background-image: url(assets/images/lacebow.png);
+        background-size: cover;
+        z-index: 0;               /* behind the link text */
     }
 
-    #navbar li {
+    /* this is the image layer */
+    .navFirstButton::before {
+        content: '';
+        position: absolute;
+        inset: -10px;
+        background-image: var(--hover-img);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .navFirstButton:hover::before {
+        opacity: 1;
+    }
+
+    .navFirstButton {
         padding-top: 10px;
-    }
-
-    /* navigation links*/
-    #navbar li a {
-        color: #ED64F5;
-        /* navbar text color */
-        font-weight: 800;
-        text-decoration: none;
-        cursor: url('assets/images/cursorscat.ico'), default;
-
-        /* this removes the underline */
+        position: relative; /* needed to anchor ::before */
     }
 
     /* navigation link when a link is hovered over */
     #navbar li a:hover {
-        color: #a49cba;
+        color: #000000;
         text-decoration: underline;
+    }
+
+    .navFirstButton:hover {
+        opacity: 1;
     }
 
     #flex {
         display: flex;
     }
 
-    /* this colors BOTH sidebars
-if you want to style them separately,
-create styles for #leftSidebar and #rightSidebar */
+    .navFirstButton a {
+    position: relative;
+    z-index: 1;
+    }
+
     aside {
         background-color: transparent;
         width: 200px;
@@ -189,7 +175,7 @@ create styles for #leftSidebar and #rightSidebar */
     }
 
     /* this is the color of the main content area,
-between the sidebars! */
+between the sidebars */
     main {
         background-color: #ffffff;
         color: rgb(219, 142, 215);
@@ -238,13 +224,7 @@ between the sidebars! */
         background-size: contain;
     }
 
-    /* what's this "order" stuff about??
-allow me to explain!
-if you're using both sidebars, the "order" value
-tells the CSS the order in which to display them.
-left sidebar is 1, content is 2, and right sidebar is 3! */
-
-    */ #leftSidebar {
+     #leftSidebar {
         order: 1;
     }
 
@@ -280,7 +260,6 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
         color: #ED64F5;
     }
 
-    /* this is just a cool box, it's the darker colored one */
     .box {
         background-color: #ffffff;
         border: 1px solid #ffffff;
@@ -300,13 +279,6 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
 
     /* BELOW THIS POINT IS MEDIA QUERY */
 
-    /* so you wanna change the width of your page? 
-by default, the container width is 900px.
-in order to keep things responsive, take your new height,
-and then subtrack it by 100. use this new number as the 
-"max-width" value below
-*/
-
     @media only screen and (max-width: 800px) {
         #flex {
             flex-wrap: wrap;
@@ -316,10 +288,6 @@ and then subtrack it by 100. use this new number as the
             width: 100%;
         }
 
-        /* the order of the items is adjusted here for responsiveness!
-since the sidebars would be too small on a mobile device.
-feel free to play around with the order!
-*/
         main {
             order: 1;
         }
