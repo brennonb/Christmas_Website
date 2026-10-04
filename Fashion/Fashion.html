@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fashion — Miu's Website</title>
+    <link rel="shortcut icon" type="x-icon" href="../favicon.ico">
     <link rel="stylesheet" href="fashionStyle.css">
 </head>
 <body>
     <h1>Fashion</h1>
         <div id="container" class="container">
         <div id="headerArea">
-            <img src="assets/images/strawbhanger.gif" class="top-right">
+            <img src="../assets/images/strawbhanger.gif" class="top-right">
             <div id="header" style="height: 145px;"></div>
             <nav id="navbar" style="margin-bottom: 10px;"> 
                     <ul id="navbar" class="navLeftButtons">
@@ -22,18 +23,9 @@
                             <a href="../garden/garden.html">Garden</a></li>
                         <li class="navFirstButton " data-hover-img="../assets/images/kittypaw.png" data-hover-text="Fashion">
                             <a href="../fashion/fashion.html">Fashion</a></li>
-                     </ul>   
-
-    <script>
-
-        document.querySelectorAll('.navFirstButton').forEach(btn => {
-        const img = btn.dataset.hoverImg;
-        if (img) btn.style.setProperty('--hover-img', `url('${img}')`);
-        });
-
-    </script>
-                    
+                     </ul>
             </nav>
         </div>
+    <script src="../scripts.js" defer></script>
 </body>
 </html>
